@@ -1,0 +1,41 @@
+{
+  "name": "shop",
+  "version": "1.0.0",
+  "description": "This is a repository for E-commerce shop website and native applications such as Android and iOS.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "web-install": "npm install --prefix web-shop",
+    "web": "npm start --prefix web-shop",
+    "app-install": "npm install --prefix app-shop",
+    "app": "npm start --prefix app-shop",
+    "server-install": "npm install",
+    "server": "nodemon server.js",
+    "shop-install": "concurrently \"npm run web-install\" \"npm run app-install\" \"npm run server-install\"",
+    "shop-app": "concurrently \"npm run server\" \"npm run web\" \"npm run app\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MadMaxINDIAN/shop.git"
+  },
+  "author": "MadMaxIndian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MadMaxINDIAN/shop/issues"
+  },
+  "homepage": "https://github.com/MadMaxINDIAN/shop#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^6.0.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^5.12.3",
+    "nodemon": "^2.0.7",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "validator": "^13.5.2"
+  }
+}
